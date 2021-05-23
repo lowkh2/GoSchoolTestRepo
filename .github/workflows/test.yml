@@ -14,8 +14,9 @@ jobs:
       - name: Checkout Test Scripts
         uses: actions/checkout@v2
         with:
-          repository: lowkh/MAD_JunitPrac2
+          repository: lowkh/GoSchoolRemoteAccessExample
           path: testDirectory
+          token: ${{ secrets.GITHUB_REMOTE }}
       - name: Check files
         run: |
             ls
