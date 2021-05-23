@@ -16,7 +16,9 @@ jobs:
         with:
           repository: lowkh/GoSchoolRemoteAccessExample
           path: testDirectory
-          token: ${{ secrets.GITHUB_REMOTE }}
+          token: ${{ secrets.GO_REMOTE }}
       - name: Check files
         run: |
+            cd testDirectory
             ls
+            cat myText
