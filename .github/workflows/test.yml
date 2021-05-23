@@ -21,4 +21,4 @@ jobs:
         run: |
             cd testDirectory
             ls
-            cat myText,txt
+            cat myText.txt
