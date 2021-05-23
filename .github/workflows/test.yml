@@ -1,0 +1,21 @@
+name: Go Remote
+on:
+  push:
+    branches: [main, master]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Source Codes
+        uses: actions/checkout@v2
+        
+      - name: Checkout Test Scripts
+        uses: actions/checkout@v2
+        with:
+          repository: lowkh/MAD_JunitPrac2
+          path: testDirectory
+      - name: Check files
+        run: |
+            ls
